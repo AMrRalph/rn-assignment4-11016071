@@ -1,18 +1,18 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 export default function Sociallinks() {
   return (
-    <View style = {{marginTop: 120, flexDirection: 'row', width: '55%', margin: 'auto', justifyContent: 'space-between'}}>
-      <View style = {{backgroundColor : '#fff', padding: 15, borderRadius: 45}}>
+    <View style = {{marginTop: 80, flexDirection: 'row', width: '55%', margin: 'auto', justifyContent: 'space-between'}}>
+      <TouchableOpacity style = {{backgroundColor : '#fff', padding: 15, borderRadius: 45}}>
         <Image style = {styles.links} source= {require('../../assets/apple.png')}/>
-      </View>
-      <View style = {{backgroundColor : '#fff', padding: 15, borderRadius: 45}}>
+      </TouchableOpacity>
+      <TouchableOpacity style = {{backgroundColor : '#fff', padding: 15, borderRadius: 45}}>
         <Image style = {styles.links} source= {require('../../assets/google.png')}/>
-      </View>
-      <View style = {{backgroundColor : '#fff', padding: 15, borderRadius: 45}}>
+      </TouchableOpacity>
+      <TouchableOpacity style = {{backgroundColor : '#fff', padding: 15, borderRadius: 45}}>
         <Image style = {styles.links} source= {require('../../assets/facebook.png')}/>
-      </View>
+      </TouchableOpacity>
     </View>
   )
 }

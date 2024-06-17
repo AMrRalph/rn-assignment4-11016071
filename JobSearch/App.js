@@ -6,8 +6,8 @@ import Homepage from './screens/Homepage';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Login/>
-      {/* <Homepage/> */}
+      {/* <Login/> */}
+      <Homepage/>
     </SafeAreaView>
   );
 }
