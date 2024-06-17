@@ -4,7 +4,6 @@ import React from 'react'
 export default function PopularJobs() {
   return (
     <View>
-      <Text>PopularJobs</Text>
     </View>
   )
 }

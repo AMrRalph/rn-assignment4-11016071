@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import Greetings from '../components/loginComponents/Greetings'
+import Greetings from '../components/loginComponents/Greetings' 
 import Signin from '../components/loginComponents/Signin'
 import Sociallinks from '../components/loginComponents/Sociallinks'
 

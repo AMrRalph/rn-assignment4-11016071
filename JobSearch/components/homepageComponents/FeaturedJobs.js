@@ -4,7 +4,7 @@ import React from 'react'
 export default function FeaturedJobs() {
   return (
     <View>
-      <Text>FeaturedJobs</Text>
+      <Text></Text>
     </View>
   )
 }

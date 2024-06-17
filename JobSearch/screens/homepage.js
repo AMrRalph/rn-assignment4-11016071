@@ -7,7 +7,7 @@ import PopularJobs from '../components/homepageComponents/PopularJobs'
 
 export default function Homepage() {
   return (
-    <View>
+    <View style = {{backgroundColor: '#fff'}}>
         <Info/>
         <Search/>
         <FeaturedJobs/>
