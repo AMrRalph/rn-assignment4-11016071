@@ -1,12 +1,12 @@
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function Signin() {
+export default function Signin({navigation}) {
   return (
     <View>
       <TextInput style = {styles.input} placeholder='Name'/>
       <TextInput style = {styles.input} placeholder='Email'/>
-      <TouchableOpacity style = {styles.submit}>
+      <TouchableOpacity onPress={() => navigation.navigate('Homepage')} style = {styles.submit}>
         <Text style = {{color: '#fff', fontSize: 20}}>Log in</Text>
       </TouchableOpacity>
     </View>

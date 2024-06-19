@@ -13,6 +13,7 @@ export default function Greetings() {
 
 const styles = StyleSheet.create({
   container : {
+    marginTop: 80,
     marginVertical: 50,
     marginLeft: 32
   }
