@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { ScrollView, View } from 'react-native'
 import React from 'react'
 import Info from '../components/homepageComponents/Info'
 import Search from '../components/homepageComponents/Search'
@@ -7,11 +7,13 @@ import PopularJobs from '../components/homepageComponents/PopularJobs'
 
 export default function Homepage() {
   return (
-    <View style = {{backgroundColor: '#fff'}}>
-        <Info/>
-        <Search/>
-        <FeaturedJobs/>
-        <PopularJobs/>
+    <View>
+        <ScrollView showsVerticalScrollIndicator = {false}>
+          <Info/>
+          <Search/>
+          <FeaturedJobs/>
+          <PopularJobs/>
+        </ScrollView>
     </View>
   )
 }

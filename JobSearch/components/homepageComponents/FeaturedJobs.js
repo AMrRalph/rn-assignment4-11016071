@@ -10,7 +10,6 @@ const lst = [
     salary: '$180,000',
     location: 'Kumasi, Ghana',
     color : '#3b86ff',
-    background : require('../../assets/fbbackground.png')
   },
   {
     companyName: 'Google',
@@ -18,8 +17,7 @@ const lst = [
     companyLogo: require('../../assets/google.png'),
     salary: '$200,000',
     location: 'Virginia, USA',
-    color : '#3b86ff',
-    background : require('../../assets/fbbackground.png')
+    color : '#0D47A1',
   },
   {
     companyName: 'Apple',
@@ -27,22 +25,54 @@ const lst = [
     companyLogo: require('../../assets/apple.png'),
     salary: '$165,000',
     location: 'Accra, Ghana',
-    color : '#3b86ff',
-    background : require('../../assets/fbbackground.png')
+    color : '#A2AAAD',
+  },
+  {
+    companyName: 'Huawei',
+    role : 'Backend Developer',
+    companyLogo: require('../../assets/huawei.png'),
+    salary: '$90,000',
+    location: 'Mancheester, UK',
+    color : '#FF0000',
+  },
+  {
+    companyName: 'Nike',
+    role : 'Human Resourcce Manager',
+    companyLogo: require('../../assets/nike.png'),
+    salary: '87,000',
+    location: 'New York, USA',
+    color : '#111111',
+  },
+  {
+    companyName: 'Microsoft',
+    role : 'UI/UX Designer',
+    companyLogo: require('../../assets/microsoft.png'),
+    salary: '$125,000',
+    location: 'Accra, Ghana',
+    color : '#F25022',
+  },
+  {
+    companyName: 'X',
+    role : 'Marketing Director',
+    companyLogo: require('../../assets/twitter.png'),
+    salary: '$79,000',
+    location: 'Ottowa, Canada',
+    color : '#1DA1F2',
   },
 ]
 
 export default function FeaturedJobs({}) {
   return (
     <View style = {{marginTop: 30, width: '90%', margin: 'auto'}}>
-      <View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <Text style = {{fontWeight: '700', fontSize: 20}}>Featured Jobs</Text>
-        <Text style = {{color: '#f2f2f3'}}>See all</Text>
+      <View style = {{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+        <Text style = {{fontWeight: '700', fontSize: 23}}>Featured Jobs</Text>
+        <Text style = {{color: '#7c7c7d', fontSize: 17, fontWeight: '700'}}>See all</Text>
       </View>
       <ScrollView horizontal = {true} showsHorizontalScrollIndicator = {false}>
         {lst.map((featured, index) => (
-          <ImageBackground key = {index} style={styles.image} source={require('../../assets/fbbackground.png')}>
-            <TouchableOpacity style = {{marginTop: 15, borderRadius: 18, backgroundColor:'#3b86ff', width: 300, marginRight: 10}}>
+          <View key = {index} style = {{alignItems: 'center'}}>
+          <ImageBackground  style={styles.image} source={require('../../assets/fbbackground.png')}>
+            <TouchableOpacity style = {{marginTop: 15, borderRadius: 18, backgroundColor:featured.color, width: 300, marginRight: 10}}>
               <View style = {{flexDirection: 'row', alignItems: 'center', width: '90%', margin: 'auto', marginTop: 15}}>
                 <View style = {{backgroundColor: '#fff', padding: 8, marginRight: 12, borderRadius: 12}}>
                   <Image source={featured.companyLogo}/>
@@ -58,6 +88,8 @@ export default function FeaturedJobs({}) {
               </View>
             </TouchableOpacity>
           </ImageBackground>
+          <View style = {{width: 8, marginTop: 5, height: 8, backgroundColor: '#7c7c7d', }}></View>
+          </View>
         ))}
       </ScrollView>
     </View>
@@ -67,6 +99,7 @@ export default function FeaturedJobs({}) {
 
 const styles = StyleSheet.create({
   image: {
-    borderRadius: 15,
+    width: '100%',
+    height: 200,
   },
 })
